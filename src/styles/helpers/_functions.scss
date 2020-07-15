@@ -1,0 +1,12 @@
+@function rem($px) {
+  @return ($px / 16) +rem;
+}
+
+@function get-container-max-width($bp) {
+  @return map-get($container-max-widths, $bp);
+}
+
+@function get-container-width-from-cols($bp, $cols) {
+  $colWidth: get-container-max-width($bp) / $grid-columns - $grid-gutter-width;
+  @return $cols * $colWidth + ($cols - 1) * $grid-gutter-width;
+}

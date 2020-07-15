@@ -1,0 +1,113 @@
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  @if $left is a "unit" or $left == "auto" {
+    left: $left;
+  }
+  @if $right is a "unit" or $right == "auto" {
+    right: $right;
+  }
+  @if $top is a "unit" or $top == "auto" {
+    top: $top;
+  }
+  @if $bottom is a "unit" or $bottom == "auto" {
+    bottom: $bottom;
+  }
+}
+
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  @include position(absolute, $top, $right, $bottom, $left);
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-all($num) {
+  position: absolute;
+  top: $num;
+  bottom: $num;
+  right: $num;
+  left: $num;
+}
+
+@mixin line-clamp($lines, $line-height: $line-height-base) {
+  max-height: $lines * $line-height * 1em;
+  overflow: hidden;
+
+  @supports (-webkit-line-clamp: 1) or (line-clamp: 1) {
+    display: -webkit-box;
+    max-height: none;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+  }
+}
+
+@mixin btn-variant($color, $background, $hover-background: $background, $active-background: $background, $color-hover: $color, $color-focus: $input-btn-focus-color) {
+  background-color: $background;
+  color: $color;
+
+  &:hover {
+    background-color: $hover-background;
+    color: $color-hover;
+  }
+
+  &:focus {
+    background-color: $background;
+    box-shadow: 0 0 0 $btn-focus-width $color-focus;
+    color: $color;
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: $background;
+    color: $color;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    background-color: $active-background;
+    color: $color-hover;
+
+    &:focus {
+      box-shadow: 0 0 0 $btn-focus-width $color-focus;
+    }
+  }
+}
+
+@mixin btn-outline-variant($color, $color-hover: $white, $active-background: $color, $active-border: $color, $color-focus: $input-btn-focus-color) {
+  border-color: $color;
+  color: $color;
+  
+  &:hover {
+    background-color: $active-background;
+    border-color: $active-border;
+    color: $color-hover;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 $btn-focus-width $color-focus;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: transparent;
+    border-color: $color;
+    color: $color;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    background-color: $active-background;
+    border-color: $active-border;
+    color: $color-hover;
+
+    &:focus {
+      box-shadow: 0 0 0 $btn-focus-width $color-focus;
+    }
+  }
+}

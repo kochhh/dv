@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["academy"],{cd27:function(e,t,n){"use strict";n.r(t);var a=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},c=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("section",{staticClass:"section"},[n("div",{staticClass:"container"},[n("p",[e._v("Академия")])])])])}],s={name:"Academy",metaInfo:{title:"Академия"}},i=s,l=n("2877"),r=Object(l["a"])(i,a,c,!1,null,null,null);t["default"]=r.exports}}]);
+//# sourceMappingURL=academy.4e330f5e.js.map

@@ -2,7 +2,7 @@
   <div>
     <section class="section">
       <div class="container">
-        <p>Главная</p>
+        <p>Академия</p>
       </div>
     </section>
   </div>
@@ -10,10 +10,10 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Academy',
 
   metaInfo: {
-    title: 'Главная',
+    title: 'Академия',
   },
 };
 </script>

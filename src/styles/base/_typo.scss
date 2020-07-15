@@ -1,0 +1,21 @@
+a, button {
+  @include transition($btn-transition);
+
+  &:not(:disabled):not(.disabled):focus {
+    outline: none;
+  }
+
+  &:not(.btn) {
+    &:not(:disabled):not(.disabled):focus {
+      box-shadow: $input-btn-focus-box-shadow;
+    }
+  }
+}
+
+a:not([href]) {
+  cursor: default;
+}
+
+img:not([src]), img[src=""] {
+  display: none;
+}
