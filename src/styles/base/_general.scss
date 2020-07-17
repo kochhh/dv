@@ -21,3 +21,10 @@ body {
     margin-bottom: 30px;
   }
 }
+
+.container {
+  @include media-breakpoint-down(xs) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

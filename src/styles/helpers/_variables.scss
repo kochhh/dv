@@ -46,6 +46,7 @@ $green:   #39AA5D;
 // $cyan:    #17a2b8 !default;
 $darkblue: #111D3A;
 $lightblue: #42728B;
+$poloblue: #90B9CE;
 
 $colors: ();
 // // stylelint-disable-next-line scss/dollar-variable-default
@@ -85,6 +86,8 @@ $theme-colors: map-merge(
     "red":        $red,
     "green":      $green,
     "lightblue":  $lightblue,
+    "orange":     $orange,
+    "poloblue":   $poloblue,
     // "secondary":  $secondary,
     // "success":    $success,
     // "info":       $info,
@@ -176,7 +179,7 @@ $spacers: ();
 // // Settings for the `<body>` element.
 
 $body-bg:                   #EDEEF4;
-$body-color:                $black;
+$body-color:                #1A1A1A;
 
 
 // // Links
@@ -222,7 +225,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1232px
+  xl: 1212px
 );
 
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -233,7 +236,7 @@ $container-max-widths: (
 // // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12;
-$grid-gutter-width:           2.5rem;
+$grid-gutter-width:           20px;
 // $grid-row-columns:            6 !default;
 
 

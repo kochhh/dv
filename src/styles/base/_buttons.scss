@@ -1,0 +1,29 @@
+.btn {
+  border-radius: $border-radius-sm;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-more {
+  border-width: 3px;
+  color: $primary;
+  font-size: rem(16);
+  height: rem(50);
+  padding: rem(10) rem(20);
+}
+
+.tags {
+  display: flex;
+
+  .btn-tag {
+    + .btn-tag {
+      margin-left: 10px;
+    }
+  }
+}
+
+.btn-tag {
+  font-size: rem(10);
+  height: rem(20);
+  padding: rem(2) rem(8);
+}

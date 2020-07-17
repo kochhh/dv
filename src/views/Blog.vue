@@ -1,153 +1,200 @@
 <template>
-  <div class="article">
-    <header class="article-header">
-      <picture class="article-header__image">
-        <source
-          :srcset="require('@/assets/images/blog-article-header-sm.jpg')"
-          media="(max-width: 600px)"
-          type="image/jpg">
-        <b-img-lazy
-          src="@/assets/images/blog-article-header.jpg"
-          center fluid-grow height="300" />
-      </picture>
-      <div class="article-header__body">
-        <b-container>
-          <a class="article-header__back d-lg-none" href="#" @click.prevent="$router.go(-1)">
-            <base-icon icon-name="arrow-prev" width="16" height="14" title="Назад">
-              <icon-arrow-prev />
-            </base-icon>
-          </a>
-          <div class="article-header__content">
-            <div class="article-header__meta">
-              <div class="article-header__published">
-                <base-icon icon-name="date" width="16" height="17" aria-hidden="true">
-                  <icon-date />
-                </base-icon>
-                <time class="date" datetime="2020-05-12 00:00">12 мая 2020</time>
+  <b-container>
+    <b-row class="listing-container">
+      <b-col lg="9">
+        <b-tabs
+          pills
+          lazy
+          nav-class="listing-filter"
+          nav-wrapper-class="listing-filter-container"
+          active-tab-class="selected">
+          <b-tab title="Все" title-link-class="btn-primary" active>
+            <div class="articles-list">
+              <div class="articles-item">
+                <div class="articles-item__image">
+                  <b-img-lazy
+                    src="https://picsum.photos/id/701/384/226"
+                    alt="Движение Вверх: Публикуем новый фирменний стиль"
+                    role="presentation"
+                    fluid-grow />
+                  <router-link class="articles-item__link" to="/blog/article"
+                    aria-label="Движение Вверх: Публикуем новый фирменний стиль"></router-link>
+                </div>
+                <div class="articles-item__body">
+                  <div class="articles-item__head">
+                    <div class="articles-item__published">
+                      <base-icon icon-name="date" width="16" height="17" aria-hidden="true">
+                        <icon-date />
+                      </base-icon>
+                      <time class="date" datetime="">4 дня назад</time>
+                    </div>
+                    <h2 class="articles-item__title">
+                      <router-link to="/blog/article">
+                        Движение Вверх: Публикуем новый фирменный стиль
+                      </router-link>
+                    </h2>
+                  </div>
+                  <div class="articles-item__excerpt">
+                    Заставил ли легендарный баскетболист своего пилота пойти
+                    на «неоправданный риск». Заставил ли легендарный баскетболист
+                    своего пилота пойти...
+                  </div>
+                  <div class="articles-item__tags tags">
+                    <a class="btn btn-tag btn-red" href="#">Матч звёзд</a>
+                    <a class="btn btn-tag btn-lightblue" href="#">События</a>
+                  </div>
+                </div>
               </div>
-              <div class="article-header__categories categories">
-                <a class="btn btn-category btn-red" href="#">Матч звёзд</a>
-                <!-- <a class="btn btn-category btn-green" href="#">Интервью</a> -->
-                <a class="btn btn-category btn-lightblue" href="#">События</a>
+              <div class="articles-item">
+                <div class="articles-item__image">
+                  <b-img-lazy
+                    src="https://picsum.photos/id/702/384/226"
+                    alt="Время расцвета трио Слоун — Стоктон — Мэллоун"
+                    role="presentation"
+                    fluid-grow />
+                  <router-link class="articles-item__link" to="/blog/article"
+                    aria-label="Время расцвета трио Слоун — Стоктон — Мэллоун"></router-link>
+                </div>
+                <div class="articles-item__body">
+                  <div class="articles-item__head">
+                    <div class="articles-item__published">
+                      <base-icon icon-name="date" width="16" height="17" aria-hidden="true">
+                        <icon-date />
+                      </base-icon>
+                      <time class="date" datetime="">02 мая 2020</time>
+                    </div>
+                    <h2 class="articles-item__title">
+                      <router-link to="/blog/article">
+                        Время расцвета трио Слоун — Стоктон — Мэллоун
+                      </router-link>
+                    </h2>
+                  </div>
+                  <div class="articles-item__excerpt">
+                    Золотая эра в истории «Джаз».
+                    Команда 16 сезонов подряд выходила в плей-офф,
+                    и, возможно, была достойна большего,
+                    чем всего два финала на закате карьеры...
+                  </div>
+                  <div class="articles-item__tags tags">
+                    <a class="btn btn-tag btn-green" href="#">Интервью</a>
+                    <a class="btn btn-tag btn-orange" href="#">Медиа</a>
+                  </div>
+                </div>
+              </div>
+              <div class="articles-item">
+                <div class="articles-item__image">
+                  <b-img-lazy
+                    src="https://picsum.photos/id/701/384/226"
+                    alt="Центровой Чаварс стал игроком «Цмоки-Минска»"
+                    role="presentation"
+                    fluid-grow />
+                  <router-link class="articles-item__link" to="/blog/article"
+                    aria-label="Центровой Чаварс стал игроком «Цмоки-Минска»"></router-link>
+                </div>
+                <div class="articles-item__body">
+                  <div class="articles-item__head">
+                    <div class="articles-item__published">
+                      <base-icon icon-name="date" width="16" height="17" aria-hidden="true">
+                        <icon-date />
+                      </base-icon>
+                      <time class="date" datetime="">24 апреля 2020</time>
+                    </div>
+                    <h2 class="articles-item__title">
+                      <router-link to="/blog/article">
+                        Центровой Чаварс стал игроком «Цмоки-Минска»
+                      </router-link>
+                    </h2>
+                  </div>
+                  <div class="articles-item__excerpt">
+                    Сезон-2019/20 Чаварс провел в «Вентспилсе».
+                    Его средние показатели в Кубке ФИБА-Европа — 11,3 очка,
+                    7,4 подбора, 2,3 блок-шота за 21 минуту на площадке.
+                  </div>
+                  <div class="articles-item__tags tags">
+                    <a class="btn btn-tag btn-lightblue" href="#">События</a>
+                  </div>
+                </div>
+              </div>
+              <div class="articles-item">
+                <div class="articles-item__image">
+                  <b-img-lazy
+                    src="https://picsum.photos/id/701/384/226"
+                    alt="НБА пожертвовала восемью аутсайдерами"
+                    role="presentation"
+                    fluid-grow />
+                  <router-link class="articles-item__link" to="/blog/article"
+                    aria-label="НБА пожертвовала восемью аутсайдерами"></router-link>
+                </div>
+                <div class="articles-item__body">
+                  <div class="articles-item__head">
+                    <div class="articles-item__published">
+                      <base-icon icon-name="date" width="16" height="17" aria-hidden="true">
+                        <icon-date />
+                      </base-icon>
+                      <time class="date" datetime="">5 апреля 2020</time>
+                    </div>
+                    <h2 class="articles-item__title">
+                      <router-link class="articles-item__link" to="/blog/article">
+                        НБА пожертвовала восемью аутсайдерами
+                      </router-link>
+                    </h2>
+                  </div>
+                  <div class="articles-item__excerpt">
+                    Совет управляющих НБА утвердил проект завершения
+                    сезона-2019/2020, который был прерван 11 марта из-за пандемии
+                    и положительных тестов на вирус...
+                  </div>
+                  <div class="articles-item__tags tags">
+                    <a class="btn btn-tag btn-red" href="#">Матч звёзд</a>
+                    <a class="btn btn-tag btn-green" href="#">Интервью</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <h1 class="article-header__title">
-              Профсоюз игроков НБА одобрил план нового сезона
-            </h1>
-          </div>
-        </b-container>
-      </div>
-    </header>
-    <div class="article-body">
-      <b-container>
-        <b-row>
-          <b-col lg="7">
-            <div class="article-content">
-              <h2 class="article-subtitle" v-html="articleTitle"></h2>
-              <p>Национальная баскетбольная ассоциация планирует, что сезон
-                2020/21 стартует 1 декабря. Обычно регулярный чемпионат стартует
-                в октябре, но из-за пандемии коронавируса календарь пришлось изменить.
-                Напомним, ранее руководители лиги согласовали возобновление сезона 2019/20
-                с плей-офф, в котором будут участвовать 22 команды.
-                Матчи планируется начать 31 июля. Финалы должны завершиться
-                не позднее 12 октября.</p>
-              <p>Национальная баскетбольная ассоциация планирует, что сезон 2020/21
-                стартует 1 декабря. Обычно регулярный чемпионат стартует в октябре,
-                но из-за пандемии коронавируса календарь пришлось изменить.</p>
-              <swiper class="article-gallery" ref="blog-gallery-1" :options="blogGalleryOptions">
-                <swiper-slide>
-                  <img class="swiper-lazy" data-src="https://picsum.photos/id/701/680/300" alt="">
-                  <div class="swiper-lazy-preloader"></div>
-                </swiper-slide>
-                <swiper-slide>
-                  <img class="swiper-lazy" data-src="https://picsum.photos/id/702/680/300" alt="">
-                  <div class="swiper-lazy-preloader"></div>
-                </swiper-slide>
-                <swiper-slide>
-                  <img class="swiper-lazy" data-src="https://picsum.photos/id/703/680/300" alt="">
-                  <div class="swiper-lazy-preloader"></div>
-                </swiper-slide>
-                <swiper-slide>
-                  <img class="swiper-lazy" data-src="https://picsum.photos/id/704/680/300" alt="">
-                  <div class="swiper-lazy-preloader"></div>
-                </swiper-slide>
-                <swiper-slide>
-                  <img class="swiper-lazy" data-src="https://picsum.photos/id/705/680/300" alt="">
-                  <div class="swiper-lazy-preloader"></div>
-                </swiper-slide>
-                <div class="swiper-pagination d-none d-md-flex" slot="pagination"></div>
-                <button type="button" class="swiper-button-prev" slot="button-prev"></button>
-                <button type="button" class="swiper-button-next" slot="button-next"></button>
-              </swiper>
-              <p>Для начала о самом сериале — без сомнения, более подходящего времени
-                для выхода документалки про Джордана и «Чикаго» 90-х найти было бы просто
-                невозможно.</p>
-              <p>Когда весь спорт (да что там спорт — весь мир) оказался на паузе
-                из-за коронавируса, а пересматривать очередной матч из далекого или
-                не очень прошлого уже не было сил и желания, 10-серийная история о лучшем
-                баскетболисте современности стала настоящей отдушиной для замершего
-                в коронадепрессии</p>
+            <div class="text-center">
+              <b-button variant="outline-poloblue" class="btn-more">Показать ещё</b-button>
             </div>
-          </b-col>
-          <b-col lg="4" xl="3" offset-lg="1" offset-xl="2" class="d-none d-lg-block">
-            <aside class="article-side">
-              <div class="related-article">
-                <figure class="related-article__image">
-                  <a href="#"><img class="img-fluid" src="https://picsum.photos/id/101/280/180" width="280" height="180" alt=""></a>
-                </figure>
-                <div class="related-article__title">
-                  <a href="#">«Химки» продлили контракт со Шведом</a>
-                </div>
-                <div class="related-article__excerpt">
-                  «Химки» согласовали с защитником Алексеем Шведом новый контракт.
-                </div>
-              </div>
-              <div class="related-article">
-                <figure class="related-article__image">
-                  <a href="#"><img class="img-fluid" src="https://picsum.photos/id/102/280/180" width="280" height="180" alt=""></a>
-                </figure>
-                <div class="related-article__title">
-                  <a href="#">Олдридж пропустит остаток сезона</a>
-                </div>
-                <div class="related-article__excerpt">
-                  Форвард «Сан-Антонио» Ламаркус Олдридж пропустит остаток сезона
-                </div>
-              </div>
-            </aside>
-          </b-col>
-        </b-row>
-      </b-container>
-    </div>
-  </div>
+          </b-tab>
+          <b-tab title="Матч звёзд" title-link-class="btn-red">
+            <p>Матч звёзд</p>
+          </b-tab>
+          <b-tab title="Интервью" title-link-class="btn-green">
+            <p>Интервью</p>
+          </b-tab>
+          <b-tab title="События" title-link-class="btn-lightblue">
+            <p>События</p>
+          </b-tab>
+          <b-tab title="Медиа" title-link-class="btn-orange">
+            <p>Медиа</p>
+          </b-tab>
+        </b-tabs>
+      </b-col>
+      <b-col lg="3" class="d-none d-lg-block">
+        <div class="listing-dates">
+          <label class="sr-only" for="datepicker">Выбрать даты:</label>
+          <b-form-datepicker id="datepicker" locale="ru" button-only right
+            label-no-date-selected="Даты не выбраны"
+            label-help="Используйте клавиши управления курсором для навигации">
+            <template v-slot:button-content>
+              Выбрать даты
+              <span class="caret"></span>
+            </template>
+          </b-form-datepicker>
+        </div>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
 import BaseIcon from '@/components/BaseIcon.vue';
 import IconDate from '@/components/icons/IconDate.vue';
-import IconArrowPrev from '@/components/icons/IconArrowPrev.vue';
 
 export default {
   name: 'Blog',
 
   components: {
-    BaseIcon, IconDate, IconArrowPrev,
-  },
-
-  data() {
-    return {
-      articleTitle: 'Матчи планируется начать 31 июля в&nbsp;спорткомплексе развлекательного парка в&nbsp;Орландо',
-      blogGalleryOptions: {
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction',
-        },
-        navigation: {
-          prevEl: '.swiper-button-prev',
-          nextEl: '.swiper-button-next',
-        },
-        lazy: true,
-      },
-    };
+    BaseIcon, IconDate,
   },
 
   metaInfo: {

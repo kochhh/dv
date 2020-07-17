@@ -1,0 +1,25 @@
+.b-calendar .b-calendar-grid {
+  height: auto;
+  overflow: visible;
+}
+
+.caret {
+  $svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M9.27 0l.73.76L5 6 0 .76.73 0 5 4.47z'/></svg>");
+  background-image: escape-svg($svg);
+  display: inline-block;
+  height: 6px;
+  margin-left: 2px;
+  vertical-align: middle;
+  width: 10px;
+}
+
+.nav-pills {
+  .nav-link.active,
+  .show > .nav-link {
+    @each $color, $value in $theme-colors {
+      &.btn-#{$color} {
+        background-color: $value;
+      }
+    }
+  }
+}

@@ -23,13 +23,13 @@
       </div>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item to="/academy" exact>Академия</b-nav-item>
+          <b-nav-item to="/academy">Академия</b-nav-item>
           <b-nav-item href="#">Обучение</b-nav-item>
           <b-nav-item href="#">Camp</b-nav-item>
           <b-nav-item href="#">Магазин</b-nav-item>
           <b-nav-item href="#">Лига</b-nav-item>
           <b-nav-item href="#">Календарь</b-nav-item>
-          <b-nav-item to="/blog" exact>Блог</b-nav-item>
+          <b-nav-item to="/blog">Блог</b-nav-item>
           <b-nav-item href="#">Компания</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
